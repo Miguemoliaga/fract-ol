@@ -40,7 +40,12 @@ FUNCTIONS =	ft_strlen.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-			ft_strtod.c
+			ft_strtod.c \
+			ft_format_hexa.c \
+			ft_format_int.c \
+			ft_format_string_char.c \
+			ft_format_unsigned.c \
+			ft_printf.c
 
 FUNCTIONS_B =	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
@@ -51,7 +56,6 @@ FUNCTIONS_B =	ft_lstnew_bonus.c \
 				ft_lstclear_bonus.c \
 				ft_lstiter_bonus.c \
 				ft_lstmap_bonus.c
-
 			
 OBJECTS = ${FUNCTIONS:.c=.o}
 

@@ -6,13 +6,14 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 20:01:49 by mmartine          #+#    #+#             */
-/*   Updated: 2023/07/26 21:18:50 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/04 16:30:12 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# include <stdarg.h>
+# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -58,6 +59,14 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 double		ft_strtod(const char *str);
+int			ft_printchar(int n);
+int			ft_printstr(char *str);
+int			ft_printnum(int number);
+int			ft_printhexa_caps(unsigned int num);
+int			ft_printhexa_minus(unsigned int num);
+int			ft_printpointer(void *pointer);
+int			ft_printf(char const *format, ...);
+int			ft_printunsigned(unsigned int number);
 
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **head, t_list *newi);
