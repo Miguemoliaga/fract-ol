@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 19:58:22 by mmartine          #+#    #+#             */
-/*   Updated: 2021/10/20 20:01:12 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/10 17:29:13 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_strncmp(const char *str1, const char *str2, size_t num)
 	i = 0;
 	while (i < num)
 	{
+		printf("letra de str 1 %c\n", str1c[i]);
+		printf("letra de str 2 %c\n", str1c[i]);
 		if ((str1c[i] == '\0') || (str2c[i] == '\0'))
 			return (str1c[i] - str2c[i]);
 		else if (str1c[i] != str2c[i])

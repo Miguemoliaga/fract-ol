@@ -6,16 +6,11 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:15:55 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/03 18:49:18 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/10 17:40:35 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-/*void	leak(void)
-{
-	system("leaks fractol");
-}*/
 
 void	properclose(t_env *env)
 {
@@ -33,7 +28,6 @@ int	escape(int keynum, t_env *env)
 		mlx_destroy_image(env->data->mlx, env->data->img);
 		mlx_destroy_window(env->data->mlx, env->data->win);
 		properclose(env);
-		exit(0);
 	}
 	return (0);
 }
@@ -85,16 +79,19 @@ int	handle_mouse(int button, int x, int y, t_env *env)
 	return (0);
 }
 
-	//atexit(leak);
 int	main(int argc, char **argv)
 {
 	t_env	*env;
 
+	atexit(showleaks);
 	env = malloc(sizeof(t_env));
 	env = envinit(env);
 	env->num->sw = getfractol(argv, argc, env->num);
 	if (env->num->sw == -1)
+	{
+		printf("entramos al cierre\n");
 		properclose(env);
+	}
 	env->data->mlx = mlx_init();
 	env->data->win = mlx_new_window(env->data->mlx, WIDTH, HEIGHT, "FRACTOL");
 	env->data->img = mlx_new_image(env->data->mlx, WIDTH, HEIGHT);
@@ -104,5 +101,6 @@ int	main(int argc, char **argv)
 	mlx_key_hook(env->data->win, escape, env);
 	mlx_hook(env->data->win, 4, 0, handle_mouse, env);
 	mlx_hook(env->data->win, 5, 0, handle_mouse, env);
+	mlx_hook(env->data->win, 17, 0, crossclose, env);
 	mlx_loop(env->data->mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:16:15 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/03 17:51:14 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/10 16:53:36 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,8 @@ typedef struct s_env{
 void	printfract(t_img *data, t_num *num, t_dims *dims, int sw);
 int		getfractol(char **arg, int argc, t_num *num);
 int		handle_mouse(int button, int x, int y, t_env *env);
+void	properclose(t_env *env);
+int		crossclose(t_env *env);
+void	showleaks(void);
 
 #endif
