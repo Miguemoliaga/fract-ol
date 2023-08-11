@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:15:55 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/10 17:40:35 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:25:24 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,14 +84,16 @@ int	main(int argc, char **argv)
 	t_env	*env;
 
 	atexit(showleaks);
+	if (argc < 2 || argc > 4)
+	{
+		outputmsg(1);
+		exit(0);
+	}
 	env = malloc(sizeof(t_env));
 	env = envinit(env);
 	env->num->sw = getfractol(argv, argc, env->num);
 	if (env->num->sw == -1)
-	{
-		printf("entramos al cierre\n");
 		properclose(env);
-	}
 	env->data->mlx = mlx_init();
 	env->data->win = mlx_new_window(env->data->mlx, WIDTH, HEIGHT, "FRACTOL");
 	env->data->img = mlx_new_image(env->data->mlx, WIDTH, HEIGHT);

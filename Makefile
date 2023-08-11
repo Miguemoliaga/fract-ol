@@ -5,7 +5,8 @@ CFLAGS	= -Wall -Werror -Wextra
 
 SRCS	=	fractol.c \
 			draw_num.c \
-			parse.c
+			parse.c \
+			utils.c
 
 
 LIBFT	= libft/

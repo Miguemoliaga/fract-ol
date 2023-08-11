@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:16:15 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/10 16:53:36 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/08/11 15:09:58 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ int		handle_mouse(int button, int x, int y, t_env *env);
 void	properclose(t_env *env);
 int		crossclose(t_env *env);
 void	showleaks(void);
+int		outputmsg(int ex);
 
 #endif
