@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 19:32:46 by mmartine          #+#    #+#             */
-/*   Updated: 2023/10/27 17:01:10 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:27:39 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int	validnum(char *str)
 		i++;
 		if (str[i] == 46)
 			i++;
+		else
+			i--;
 	}
 	while (str[i])
 	{
@@ -79,8 +81,9 @@ int	getfractol(char **arg, int i, t_num *num)
 	{
 		num->fixreal = ft_strtod(arg[2]);
 		num->fiximag = ft_strtod(arg[3]);
-		if (!(validnum(arg[2]) && validnum(arg[3])) || (num->fixreal < -2
-				&& num->fixreal > 2) || (num->fiximag < -2 || num->fiximag > 2))
+		if (!(validnum(arg[2]) && validnum(arg[3])) || (num->fixreal <= -2
+				&& num->fixreal >= 2) || (num->fiximag <= -2
+				|| num->fiximag >= 2))
 			return (outputmsg(2));
 		return (2);
 	}

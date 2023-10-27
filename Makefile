@@ -1,7 +1,7 @@
 NAME	= fractol
 CC		= gcc
 
-CFLAGS	= -Wall -Werror -Wextra -g -O3 -fsanitize=address
+CFLAGS	= -Wall -Werror -Wextra
 
 SRCS	=	fractol.c \
 			draw_num.c \
