@@ -8,7 +8,6 @@ SRCS	=	fractol.c \
 			parse.c \
 			utils.c
 
-
 LIBFT	= libft/
 
 MAKE_LIB= make bonus
