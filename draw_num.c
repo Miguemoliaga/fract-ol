@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:55:28 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/10 18:06:43 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/09/05 15:32:27 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	mandelbrot(t_num *num)
 	zx = 0;
 	zy = 0;
 	it = 0;
-	while ((zx * zx + zy * zy < 4) && (it < 200))
+	while ((zx * zx + zy * zy < 4) && (it < 100))
 	{
 		tmp = zx * zx - zy * zy + num->real;
 		zy = 2 * zx * zy + num->imag;

@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:15:55 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/11 15:25:24 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:05:46 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	main(int argc, char **argv)
 {
 	t_env	*env;
 
-	atexit(showleaks);
+	//atexit(showleaks);
 	if (argc < 2 || argc > 4)
 	{
 		outputmsg(1);

@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 19:32:46 by mmartine          #+#    #+#             */
-/*   Updated: 2023/08/11 15:16:24 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:01:10 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	validnum(char *str)
 		i++;
 	if (!str[i])
 		return (0);
-	if (str[i] == 48)
+	if (str[i] == 48 || str[i] == 49)
 	{
 		i++;
 		if (str[i] == 46)
