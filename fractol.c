@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 17:15:55 by mmartine          #+#    #+#             */
-/*   Updated: 2023/10/27 17:27:50 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:06:45 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,11 +79,11 @@ int	handle_mouse(int button, int x, int y, t_env *env)
 	return (0);
 }
 
+	//atexit(showleaks);
 int	main(int argc, char **argv)
 {
 	t_env	*env;
 
-	//atexit(showleaks);
 	if (argc < 2 || argc > 4)
 	{
 		outputmsg(1);
