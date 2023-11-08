@@ -6,7 +6,7 @@
 /*   By: mmartine <mmartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:55:28 by mmartine          #+#    #+#             */
-/*   Updated: 2023/10/27 17:19:38 by mmartine         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:29:22 by mmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	julia(t_num *num)
 	zx = num->real;
 	zy = num->imag;
 	it = 0;
-	while ((zx * zx + zy * zy < 4) && (it < 200))
+	while ((zx * zx + zy * zy < 4) && (it < 100))
 	{
 		tmp = zx * zx - zy * zy;
 		zy = 2 * zx * zy + num->fiximag;
